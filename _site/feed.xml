@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-26T23:16:41+08:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Operations Research</title><link href="http://localhost:4000/machine/learning/2017/07/26/operations-research.html" rel="alternate" type="text/html" title="Operations Research" /><published>2017-07-26T19:06:46+08:00</published><updated>2017-07-26T19:06:46+08:00</updated><id>http://localhost:4000/machine/learning/2017/07/26/operations-research</id><content type="html" xml:base="http://localhost:4000/machine/learning/2017/07/26/operations-research.html">&lt;h1 id=&quot;brief&quot;&gt;Brief&lt;/h1&gt;
+&lt;p&gt;The application of scientific methods to the study of operations of large complex organizations or activities in order to give executives a quantitative basis for reaching optimum decisions&lt;/p&gt;
+
+&lt;h1 id=&quot;sample-questions-applications&quot;&gt;Sample Questions (Applications)&lt;/h1&gt;
+&lt;p&gt;Reddy Mikks produces both interior and exterior paints from two raw materials, M1 and M2. The following table provides the basic data of the problem:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/img01.png&quot; alt=&quot;image01&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How to achieve the maximum profit ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;steps&quot;&gt;Steps:&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Problem Definition and Data Gathering&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mathematical Model Building&lt;/strong&gt; (introduce below)&lt;/li&gt;
+  &lt;li&gt;Developing Solution Approach&lt;/li&gt;
+  &lt;li&gt;Model Solution Testing&lt;/li&gt;
+  &lt;li&gt;Implementation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Finding Jobs’&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Decision variable: &lt;em&gt;No. of M1, x1 and No. of M2, x2&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Objective: &lt;em&gt;Maximum profit&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Constraint: &lt;em&gt;Limitation of the materials&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Mathematic descriptiong&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Decision variable:
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;X1 = Tons produced daily of exterior paint&lt;/li&gt;
+        &lt;li&gt;X2 = Tons produced daily of interior paint&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Objective function: _Maximize the total daily profit (z)
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;z=5*X1 + 4*X2&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Constraint:
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;6*X1 + 4*X2 ≤ 24 ( Raw material M1)&lt;/li&gt;
+        &lt;li&gt;X1 + 2*X2 ≤ 6 (RawmaterialM2)&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;methods&quot;&gt;Methods&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Graphical Solution Method ( for 2 decision variables problem, we can draw a graphy and slove it. )&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Simplex Method&lt;/strong&gt; ( a general solution technique for solving LP problem. introduce below. )&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;simplex-method&quot;&gt;Simplex Method&lt;/h1&gt;
+&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Extreme point solution (corner point solution):&lt;/strong&gt; 
+ Solution points that lie on the intersection of a number of constraint lines.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Adjacent Extreme point solution:&lt;/strong&gt;
+ Two extreme point solutions are adjacent extreme points if they are connected by a constraint line (2-dimension case).&lt;/li&gt;
+  &lt;li&gt;An optimal solution is always a &lt;strong&gt;corner point&lt;/strong&gt; solution and none of the adjacent extreme point solution is better off in the value of the objective function.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Brief The application of scientific methods to the study of operations of large complex organizations or activities in order to give executives a quantitative basis for reaching optimum decisions</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/07/26/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-07-26T17:28:46+08:00</published><updated>2017-07-26T17:28:46+08:00</updated><id>http://localhost:4000/jekyll/update/2017/07/26/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/07/26/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
