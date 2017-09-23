@@ -33,7 +33,9 @@ Categorization system automatically classify the category of the text.
 - Need to “audit” the results occasionally (use an assessor)
 	- Assess random sample of the documents against the predicted categories
 
-# 4. Classifiers
+<p>Notice: You can find the python code https://github.com/shenshutao/Machine-Learning/tree/master/Text%20Mining/Text%20Classification</p> 
+
+# 4. Classifiers   
 #### Hand-coded classifiers (the “good old days!”)
 > If <conditions> then <category> else NOT<category>
 
