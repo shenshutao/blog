@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Natural Language Processing 自然语言处理"
+title: "NLP Information Extraction 自然语言处理 信息提取"
 date:   2017-09-29 10:06:46 +0800
-categories: machine learning
+categories: text mining
 ---
 
 # Python代码
