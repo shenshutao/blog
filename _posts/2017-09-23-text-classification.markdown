@@ -4,6 +4,8 @@ title: "Text Classification"
 date:   2017-09-23 10:06:46 +0800
 categories: machine learning
 ---
+# Python code     
+https://github.com/shenshutao/Machine-Learning/tree/master/Text%20Mining/Text%20Classification
 
 # 1. Brief
 Categorization system automatically classify the category of the text.
@@ -33,13 +35,12 @@ Categorization system automatically classify the category of the text.
 - Need to “audit” the results occasionally (use an assessor)
 	- Assess random sample of the documents against the predicted categories
 
-<p>Notice: You can find the python code https://github.com/shenshutao/Machine-Learning/tree/master/Text%20Mining/Text%20Classification</p> 
-
 # 4. Classifiers   
 #### Hand-coded classifiers (the “good old days!”)
 > If <conditions> then <category> else NOT<category>
 
 #### Probabilistic Classifiers
+> Naïve Bayes
 
 #### Decision Tree Classifiers
 > Decide if a name is male or female.    
@@ -49,6 +50,7 @@ Categorization system automatically classify the category of the text.
 #### The Rocchio Classifiers
 
 #### Support Vector Machines (SVMs)
+Before deep learning conquer the world, SVM is the king.
 
 # 5. Evaluation
 > Confusion Matrix.  

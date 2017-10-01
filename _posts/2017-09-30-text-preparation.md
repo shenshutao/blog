@@ -60,7 +60,7 @@ Term frequency, the frequency of words in the document, which provides additiona
 (tf table)
 
 #### - Frequent Word List
-- With frequency‐based TDM, a list of words and their frequencies in the corpus can be generated. 
+- With frequency‐based DTM(document-term matrix), a list of words and their frequencies in the corpus can be generated. 
 - Sorted by frequency, can give us a rough idea of what the corpus is about.
 - Word Cloud is a nice visualization tool.
 <img src="{{ site.baseurl }}/img/textmining/wordcloud01.png" alt="wc01" style="width: 500px;"/>
