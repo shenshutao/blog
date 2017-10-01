@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clustering in Text Mining"
-date:   2017-09-29 10:06:46 +0800
+date:   2017-10-10 10:06:46 +0800
 categories: machine learning
 ---
 
