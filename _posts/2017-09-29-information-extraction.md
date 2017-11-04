@@ -1,8 +1,11 @@
 ---
-layout: post
+layout: splash
 title: "NLP Information Extraction 自然语言处理 信息提取"
 date:   2017-09-29 10:06:46 +0800
 categories: text mining
+comments: false
+share: true
+publish: true
 ---
 
 # Python代码

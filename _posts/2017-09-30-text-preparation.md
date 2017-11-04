@@ -1,8 +1,11 @@
 ---
-layout: post
-title: "Text Preparation"
+layout: splash
+title: "Text Preparation 自然语言 预处理"
 date:   2017-09-30 17:06:46 +0800
 categories: text mining
+comments: false
+share: true
+publish: true
 ---
 
 # Target
@@ -20,7 +23,7 @@ Break a stream of characters into tokens by identifying token delimiters:
 - Punctuation characters like ( ) < > ! ? “ ”
 - Othercharacters .,:‐‘’etc.     
 
-<img src="{{ site.baseurl }}/img/textmining/tokenize01.png" alt="tokenize01" style="width: 500px;"/>    
+![Word Tokenize]({{ site.baseurl }}/img/textmining/tokenize01.png){:width="500px"} 
 
  
 #### 2. Lemmatization / Stemming
@@ -43,27 +46,27 @@ Some words are extremely common. They appear in almost all documents and carry l
 - Functional words (conjunctions, prepositions, determiners, or pronouns) like the, of, to, and, it, etc.
 - A stopword list can be constructed to exclude them from analysis.
 - Depending on the domain, other words may need to be included in the stopword list.      
-<img src="{{ site.baseurl }}/img/textmining/stopwords01.png" alt="sw01" style="width: 500px;"/>
+
+![Stop Words]({{ site.baseurl }}/img/textmining/stopwords01.png){:width="500px"}
 
 ----
 # Step 3: Indexing
-Many text mining applications are based on vector representation of documents (term‐document matrix) using “bag‐of‐words” approach
-<img src="{{ site.baseurl }}/img/textmining/indexing01.png" alt="indexing01" style="width: 500px;"/>
-Usually only content words (adjectives, adverbs, nouns, and verbs) are used as vector features.
+Many text mining applications are based on vector representation of documents (term‐document matrix) using “bag‐of‐words” approach. 
+Usually only content words (adjectives, adverbs, nouns, and verbs) are used as vector features.          
+![Indexing]({{ site.baseurl }}/img/textmining/indexing01.png){:width="500px"}    
 
 #### - Two Ways of Term Weighting
 - Binary      
 0 or 1, simply indicating whether a word has occurred in the document (but that’s not very helpful).
 - Frequency‐based*      
-Term frequency, the frequency of words in the document, which provides additional information that can be used to contrast with other documents.
-<img src="{{ site.baseurl }}/img/textmining/termfrequency01.png" alt="tf01" style="width: 500px;"/>     
-(tf table)
+Term frequency, the frequency of words in the document, which provides additional information that can be used to contrast with other documents.      
+![Term Frequency]({{ site.baseurl }}/img/textmining/termfrequency01.png){:width="500px"}
 
 #### - Frequent Word List
 - With frequency‐based DTM(document-term matrix), a list of words and their frequencies in the corpus can be generated. 
 - Sorted by frequency, can give us a rough idea of what the corpus is about.
-- Word Cloud is a nice visualization tool.
-<img src="{{ site.baseurl }}/img/textmining/wordcloud01.png" alt="wc01" style="width: 500px;"/>
+- Word Cloud is a nice visualization tool.   
+![Word Cloud]({{ site.baseurl }}/img/textmining/wordcloud01.png){:width="500px"}
 
 #### - Other Weighting Methods
 - Normalized frequency   
@@ -75,9 +78,9 @@ To modify the frequency of a word in a document by the perceived importance of t
     - When the word is relatively unique and appears in few documents, it’s important.
 
 #### - tf‐idf Indexing
-<img src="{{ site.baseurl }}/img/textmining/tf-idf01.png" alt="tfidf01" style="width: 500px;"/>     
+![TF-IDF 1]({{ site.baseurl }}/img/textmining/tf-idf01.png){:width="500px"}     
 ##### Example:      
-<img src="{{ site.baseurl }}/img/textmining/tf-idf02.png" alt="tfidf02" style="width: 500px;"/>     
+![TF-IDF 2]({{ site.baseurl }}/img/textmining/tf-idf02.png){:width="500px"}          
 _Note that in this example, stopwords and very common words are not removed, and terms are not reduced to root terms._
 1. Get tf table
 2. Calculate IDF    

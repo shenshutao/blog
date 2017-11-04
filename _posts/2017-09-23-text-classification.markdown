@@ -1,8 +1,11 @@
 ---
-layout: post
+layout: splash
 title: "Text Classification"
 date:   2017-09-23 10:06:46 +0800
 categories: machine learning
+comments: false
+share: true
+publish: true
 ---
 # Python code     
 https://github.com/shenshutao/Machine-Learning/tree/master/Text%20Mining/Text%20Classification

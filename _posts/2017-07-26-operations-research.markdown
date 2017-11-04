@@ -1,8 +1,11 @@
 ---
-layout: post
+layout: splash
 title: "Operations Research"
 date:   2017-07-26 19:06:46 +0800
 categories: machine learning
+comments: false
+share: true
+publish: true
 ---
 
 # Brief
@@ -11,7 +14,7 @@ The application of scientific methods to the study of operations of large comple
 # Sample Questions (Applications)
 Reddy Mikks produces both interior and exterior paints from two raw materials, M1 and M2. The following table provides the basic data of the problem:
 
-![image01](/img/img01.png)
+![image01]({{ site.baseurl }}/img/img01.png){:width="500px"} 
 
 __How to achieve the maximum profit ?__
 
