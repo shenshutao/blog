@@ -9,7 +9,7 @@ tags:
 - bayesian
 comments: true
 share: true
-publish: true
+published: true
 ---
 <style type="text/css">
     table {

@@ -7,8 +7,8 @@ tags:
 - 相关系数
 layout: splash
 comments: false
-share: true
-publish: false
+share: false
+published: false
 ---
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 # 相关系数

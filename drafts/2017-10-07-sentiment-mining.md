@@ -5,7 +5,7 @@ date:   2017-10-01 10:06:46 +0800
 categories: sentiment mining
 comments: false
 share: true
-publish: false
+published: false
 ---
 
 Regular opinions: sentiment expressed on some target entity/aspect

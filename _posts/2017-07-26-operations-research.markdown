@@ -5,7 +5,7 @@ date:   2017-07-26 19:06:46 +0800
 categories: machine learning
 comments: false
 share: true
-publish: true
+published: true
 ---
 
 # Brief

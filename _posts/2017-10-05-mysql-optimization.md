@@ -8,7 +8,7 @@ tags:
 layout: splash
 comments: false
 share: true
-publish: true
+published: true
 ---
 # 概述
 数据库的性能基于数据库层的几个因素，比如表，查询和配置。当然这些软件上的操作最终会落实到硬件层的CPU和IO操作。所以Mysql的数据库优化包括以下方面：
