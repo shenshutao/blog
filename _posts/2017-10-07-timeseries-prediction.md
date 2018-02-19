@@ -8,7 +8,6 @@ share: true
 published: true
 ---
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-# http://www.cnblogs.com/aquastar/archive/2012/12/16/2820106.html
 ## 简介   
 时间序列预测是非常常见的，比如：每天的销售量，每小时的地铁人流量。 
 [直接看Python代码](#pythoncode)
