@@ -66,6 +66,9 @@ ARIMA可以分成三个部分：AR, I, MA.
 移动平均模型：
 
 
+## Seasonal ARIMA 
+
+## Seasonal ARIMA with Exogenous Variable
 
 ## <span name="pythoncode">Python代码</span>
 
