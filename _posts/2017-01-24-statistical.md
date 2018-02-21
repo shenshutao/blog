@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Applied Engineering Statistics"
+title: "应用工程统计学"
 date:   2017-09-23 10:06:47 +0800
 categories: machine learning
 comments: false
@@ -8,6 +8,7 @@ share: true
 published: true
 ---
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+# 应用工程统计学基础
 
 ## 基本概念
 #### 随机变量
