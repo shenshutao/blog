@@ -37,7 +37,7 @@ $$ F\left ( x \right ) = P(X \leq x) = \int_{-\infty }^{x}f\left ( u \right )du 
 **为什么重要：** 中心极限定理 The Central Limit Theorem\*      
 $$ X \sim \mathcal{N}(\mu,\,\sigma^{2})\, $$    
 它的概率密度函数为：
-$$ f(x) = P(X \leq  x) = \frac{1}{\sqrt{2\pi \sigma ^{2}}} \mathrm{exp}\left (  - \frac{ \left ( x - \mu^{2}  \right )}{2\sigma ^{2}}  \right ) 其中： \mu \mathbb\in {R},\sigma ^{2} > 0 $$    
+$$ f(x) = \frac{1}{\sqrt{2\pi \sigma ^{2}}} \mathrm{exp}\left (  - \frac{ \left ( x - \mu^{2}  \right )}{2\sigma ^{2}}  \right ) 其中： \mu \mathbb\in {R},\sigma ^{2} > 0 $$    
 $$ \mu 是平均值， \sigma ^{2}是方差 $$
 
 #### 标准正态分布 Standard Normal Distribution
