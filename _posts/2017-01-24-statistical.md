@@ -25,10 +25,10 @@ published: true
 ## 连续型随机变量
 对于连续型变量，它的值是无限的，于是对于某个点来讲，它的概率是零，即P(X=x)=0
 #### 那么怎样定义概率？ 于是引入 
-**概率密度函数: Probability Density Function (pdf)**     
+- **概率密度函数: Probability Density Function (pdf)**     
 $$ P(a<X<b)=\int_{a}^{b}f(x)dx\quad 其中： 1. f(x) \geq  0 \quad 2.\int_{- \infty }^{ \infty }f(x)dx = 1 $$
 
-**累积分布函数: Cumulative Distribution Function (cdf)**      
+- **累积分布函数: Cumulative Distribution Function (cdf)**      
 $$ F\left ( x \right ) = P(X \leq x) = \int_{-\infty }^{x}f\left ( u \right )du $$
 
 
@@ -40,29 +40,31 @@ $$ F\left ( x \right ) = P(X \leq x) = \int_{-\infty }^{x}f\left ( u \right )du 
 ### 重要的连续型随机变量分布：
 #### 正态(Normal)分布 又名高斯(Gaussian)分布 Normal Distribution
 **为什么重要：** 中心极限定理 The Central Limit Theorem\*      
+**怎么来的:** [正态分布的前世今生](https://cosx.org/2013/01/story-of-normal-distribution-1/)       
 $$ X \sim \mathcal{N}(\mu,\,\sigma^{2})\, $$    
 它的概率密度函数为：
-$$ f(x) = \frac{1}{\sqrt{2\pi \sigma ^{2}}} \mathrm{exp}\left (  - \frac{ \left ( x - \mu^{2}  \right )}{2\sigma ^{2}}  \right ) 其中： \mu \mathbb\in {R},\sigma ^{2} > 0 $$    
+$$ f(x) = \frac{1}{\sqrt{2\pi \sigma ^{2}}} \mathrm{exp}\left (  - \frac{ \left ( x - \mu \right )^{2}}{2\sigma ^{2}}  \right ) 其中： \mu \mathbb\in {R},\sigma ^{2} > 0 $$    
 $$ \mu 是平均值， \sigma ^{2}是方差 $$
 
 #### 标准正态分布 Standard Normal Distribution
-当一个正态分布变量满足$$ 均值\mu = 0， 方差\sigma ^{2} = 1 $$， 我们把它称为标准正态分布变量，记做 **'Z'** 。    
-$$ \Phi\left ( z \right ) = \mathbb{P}\left [ Z \leq z \right ] $$     
+当一个正态分布变量满足$$ 均值\mu = 0， 方差\sigma ^{2} = 1 $$， 我们把它称为标准正态分布变量，记做 **'Z'** 。     
+- 它的概率密度函数为：$$ f(x) = \frac{1}{\sqrt{2\pi}} \mathrm{exp}\left (  - \frac{x^{2}}{2}  \right ) $$      
+- 它的累积分布函数为：$$ \Phi\left ( z \right ) = \mathbb{P}\left [ Z \leq z \right ] $$     
 
 如果X是一个普通的正态分布变量，$$ 平均值为\mu， 方差为\sigma ^{2} $$，我们可以将其 **转化** 为标准正态分布变量：    
 $$ Z = \frac{X - \mu }{\sigma } $$     
 所以：    
 $$ \mathbb{P}\left [ X\leq x \right ] = \mathbb{P}\left [ \frac{X - \mu }{\sigma } \leq \frac{x - \mu }{\sigma } \right ] = \Phi \left ( \frac{x - \mu }{\sigma } \right ) $$     
-然后我们就可以使用标准正态分布表查询概率了。     
+然后我们就可以使用[标准正态分布表](http://www.stat.ufl.edu/~athienit/Tables/Ztable.pdf)查询概率了，表上面是它的累积分布函数的值。     
 
 
 ## 离散型随机变量
 取值只有有限个或可列无穷个，比如投骰子的点数，调查的人数。    
 #### 定义概率
-**概率质量函数 Probability Mass Function**: 离散随机变量在各特定取值上的概率       
+- **概率质量函数 Probability Mass Function**: 离散随机变量在各特定取值上的概率       
 $$ f(x_{i}) = P(X = x_{i}) $$     
 
-**累积分布函数: Cumulative Distribution Function**     
+- **累积分布函数: Cumulative Distribution Function**     
 $$ F(x) = P(X \leq x) = \sum_{x_{i} \leq x}^{} f(x_{i}) $$      
 
 #### 平均值和方差 Mean and Variance
@@ -111,18 +113,38 @@ $$ \sigma^{2} $$ | $$ S^{2}=\frac{\sum (X_{i} - X)^{2}}{n-1} $$ | $$ s^{2} $$
 
 
 #### 假设检验
-基本思想是**小概率反证思想。**即小概率事件（P<0.01或P<0.05）在一次试验中基本上不会发生。     
+基本思想是**小概率反证思想**。小概率事件（P<0.01或P<0.05）在一次试验中基本上不会发生。     
+即我们对总体的某个统计量（一般为均值）提出假设，然后求得在这个假设前提下当前样本的发生概率，如果概率非常小，则认为我们的假设不对，拒绝我们的假设。     
 具体步骤结合例子为下面7步：      
 例子： 我们想知道一种固体推进器的线性燃烧速率是否为50cm/s，于是我们做了试验，得到一组数据，然后我们进行假设检验：            
-1. 将问题提炼为统计问题: $$ \color{red}{我们关心的是总体均值 \mu} $$
+1. 将问题提炼为统计问题: $$ \color{red}{我们关心的是总体均值 \mu是否为50cm/s} $$
 2. 提出检验假设 Null hypothesis, $$ \color{red}{ H_{0}: \mu=50cm/s }$$
 3. 提出备择假设 Alternative hypothesis, $$ \color{red}{ H_{1}: \mu\neq 50cm/s }$$
 4. 确立检验统计量: $$ \color{red}{样本均值 \bar{X}}$$
-5. 定义拒绝 $$ H_{0} $$的拒绝域: $$ \color{red}{如果假设成立，检验统计量\bar{X}落在拒绝域是一种小概率事件，不应该发生} $$
+5. 定义拒绝 $$ H_{0} $$的拒绝域: $$ \color{red}{样本均值一般符合均值为\mu的正态分布，如果假设成立，\bar{X}落在50附近的概率大。于是提出拒绝域，比如小于48.5或大于51.5} $$
 6. 根据样本，计算检验统计量的值: $$ \color{red}{计算 \bar{x}} $$
 7. 判断是否拒绝: $$ \color{red}{如果\bar{x}在拒绝域内，拒绝检验假设H_{0}} $$
 
+当然假设验证的结论是根据概率得出来的，它会产生两类错误：
+<table border="2">
+    <tbody>
+        <tr><td align="center" valign="middle" colspan="2" rowspan="2"></td><td align="center" valign="middle" colspan="2" rowspan="1">实际情况</td></tr>
+        <tr><td align="center" valign="middle">H0正确</td><td align="center" valign="middle">H0错误</td></tr>
+        <tr><td align="center" valign="middle" colspan="1" rowspan="2">研究结论</td><td align="center" valign="middle">拒绝H0</td><td width="153" align="center" valign="middle" bgcolor="red">I类错误</td><td width="153" align="center" valign="middle">正确</td></tr>
+        <tr><td align="center" valign="middle">没有拒绝H0</td><td align="center" valign="middle">正确</td><td width="153" align="center" valign="middle" bgcolor="red">II类错误</td></tr>
+    </tbody>
+</table>
 
+- I类错误     
+    这类错误危害较大，因为拒绝假设为强结论，如果后续研究、应用基于这个结论，危害不可估量。    
+    产生原因:    
+    - 样本中极端数据？
+    - 样本太小了？（样本数量小于40的情况下，样本均值服从的是T分布。概率密度函数比正态分布扁平一些，样本均值有更大的概率落在拒绝域。）
+    - 定义的拒绝域太大了？
+    在这个情况下，我们引入**显著性水平(Significant Level)**的概念，$$ \alpha = \mathbb{P}\left [ 拒绝H_{0} | H_{0}正确 \right ] $$ ，来帮助我们定义拒绝域。  
+
+- II类错误    
+    这类错误发生比较普遍，H0错误的情况下，没有拒绝H0。主要是实验设计上面的问题。此类错误危害较小，因为结果为不能拒绝H0为弱结论，并不等于H0正确。
 
 ## 双变量情况
 
