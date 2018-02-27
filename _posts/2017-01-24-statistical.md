@@ -14,6 +14,8 @@ published: true
 </style>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 # 应用工程统计学基础
+* 目录    
+{:toc}
 
 ## 基本概念
 **随机变量** 是指变量的值无法预先确定，仅以一定的可能性(概率)取值的量。
@@ -86,9 +88,8 @@ $$ f(x) = \binom{n}{x} p^{x} (1-p)^{n-x}, x = 0,1,...,n $$
 在适当的条件下，大量相互独立的**随机变量**，其样本均值 $$ \bar{X} $$ （或者和）经适当标准化后依分布收敛于**正态分布**。      
 有趣的是： **无论是什么分布的随机变量，都满足这个定理。**        
 
-于是我们得到关于样本均值$$ \bar{X} $$的标准正态分布函数：       
-$$ Z = \frac{\bar{X} - \mu }{\sigma / \sqrt{n}} \quad as \quad n \to \infty $$
-
+于是我们得到**关于样本均值$$ \bar{X} $$的标准正态分布函数**：       
+$$ \color{red}{Z = \frac{\bar{X} - \mu }{\sigma / \sqrt{n}} \quad as \quad n \to \infty }$$ (后面会经常用到这个公式)
 
 
 ## 单变量情况
@@ -167,13 +168,32 @@ $$ \sigma^{2} $$ | $$ S^{2}=\frac{\sum (X_{i} - X)^{2}}{n-1} $$ | $$ s^{2} $$
 $$ 根据分布，求得 \mathbb{P}[\bar{X} \leq 51.8 | H_{0}正确]=0.0113$$ 
 因为这是一个Two-sided P-value问题, 这只是一边的情况，因为正态分布是对称的，于是我们判断$$P值 = 0.0113 + 0.0113 < \alpha$$。于是当我们选择$$\alpha=0.05$$的时候，拒绝零假设H0。 
 
-### 把单变量问题分为以下两种：
-#### 在总体方差已知的情况下，推断总体均值
-上方假设检验的例子，就是这种情况。    
+One-sided还是Two-sided取决于备择假设，备择假设取决于实际问题。   
 零假设H0: $$\mu=\mu_{0}$$    
 样本均值分布: $$Z_{0}=\frac{\bar{X}-\mu_{0}}{\sigma/\sqrt{n}}$$
 
+备择假设 | P值 | 假设拒绝条件
+---- | --- | ---   
+$$ H_{1}: \mu \neq \mu_{0}  $$ | $$ P=2[1-\Phi(\|z_{0}\|)] $$ | $$ z_{0}>z_{\alpha/2} or z_{0}<z_{-\alpha/2} $$ 
+$$ H_{1}: \mu > \mu_{0}  $$ | $$P=1-\Phi(z_{0})$$ | $$ z_{0}>z_{\alpha} $$ 
+$$ H_{1}: \mu < \mu_{0}  $$ | $$P=\Phi(z_{0})$$ | $$ z_{0}<-z_{\alpha} $$ 
+
+#### 均值的置信区间 Confidence Interval on the Mean 
+有时候，光给出点估计是不够的，我们想要的一个区间，比如真实值有95%的概率落在[48，52]。    
+置信区间体现了这个参数的真实值有一定概率落在测量结果的周围的程度。比如一个Two-sided区间$$\mathbb{P}[L \leq \Theta \leq H]=1-\alpha$$      
+其中$$1-\alpha$$为置信系数confidence coefficient，即真实值落在[L,H]范围内的概率。    
+也有单边One-sided区间：$$\mathbb{P}[L \leq \Theta ]=1-\alpha 和 \mathbb{P}[\Theta \leq H]=1-\alpha$$     
+
+### 把单变量问题分为以下两种：
+#### 在总体方差已知的情况下，推断总体均值
+以上的例子就是基于方差已知的情况。
+
 #### 在总体方差未知的情况下，推断总体均值
+总体方差未知的情况下，如果样本数量大于40，S和$$\mu$$的差别比较小，我们可以将样本方差S来近似$$\mu$$直接用于z-test。   
+可是当样本数量小于40时，样本方差S和总体方差$$\mu$$的差别会比较大，于是我们不能再使用z分布，需要用到t分布。（有些书上写小于30）    
+t分布：根据小样本来估计呈正态分布且方差未知的总体的均值。表示为$$T=\frac{\bar{X}-\mu}{S/\sqrt{n}}$$    
+t分布的概率密度函数为：$$ f(x)=\frac{\Gamma (\frac{k+1}{2})}{\sqrt{k\pi} \Gamma (\frac{k}{2})}(1+\frac{x^2}{k})^{-\frac{k+1}{2}}, x\in \mathbb{R} $$。  
+使用中需要查询[t分布临界值表](https://wenku.baidu.com/view/49682ca7b0717fd5360cdc99.html),用自由度k和显著性水平$$\alpha$$来查询拒绝H0的临界值。
 
  
 ## 双变量情况
