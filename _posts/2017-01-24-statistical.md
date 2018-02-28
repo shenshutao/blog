@@ -26,7 +26,7 @@ published: true
 
 ## 连续型随机变量
 对于连续型变量，它的值是无限的，于是对于某个点来讲，它的概率是零，即P(X=x)=0
-#### 那么怎样定义概率？ 于是引入 
+### 那怎样定义概率？    
 - **概率密度函数: Probability Density Function (pdf)**     
 $$ P(a<X<b)=\int_{a}^{b}f(x)dx\quad 其中： 1. f(x) \geq  0 \quad 2.\int_{- \infty }^{ \infty }f(x)dx = 1 $$
 
@@ -34,7 +34,7 @@ $$ P(a<X<b)=\int_{a}^{b}f(x)dx\quad 其中： 1. f(x) \geq  0 \quad 2.\int_{- \i
 $$ F\left ( x \right ) = P(X \leq x) = \int_{-\infty }^{x}f\left ( u \right )du $$
 
 
-#### 平均值和方差 Mean and Variance
+### 平均值和方差 Mean and Variance
 平均值 (期望值)： $$ \mu = E(X) = \int_{-\infty }^{\infty} xf(x)dx $$      
 方差： $$ \sigma ^{2} = V(X) =  \int_{-\infty }^{\infty} (x - \mu)^2 f(x)dx = E(X^2 ) - \mu^2 $$    
 标准方差为 $$ \sigma $$
@@ -62,14 +62,14 @@ $$ \mathbb{P}\left [ X\leq x \right ] = \mathbb{P}\left [ \frac{X - \mu }{\sigma
 
 ## 离散型随机变量
 取值只有有限个或可列无穷个，比如投骰子的点数，调查的人数。    
-#### 定义概率
+### 定义概率
 - **概率质量函数 Probability Mass Function**: 离散随机变量在各特定取值上的概率       
 $$ f(x_{i}) = P(X = x_{i}) $$     
 
 - **累积分布函数: Cumulative Distribution Function**     
 $$ F(x) = P(X \leq x) = \sum_{x_{i} \leq x}^{} f(x_{i}) $$      
 
-#### 平均值和方差 Mean and Variance
+### 平均值和方差 Mean and Variance
 平均值 (期望值)： $$ \mu = E(X) = \sum_{i=1}^{n} x_{i}f(x_{i}) $$      
 方差： $$ \sigma ^{2} = V(X) =  E(X-\mu)^2 = \sum_{i=1}^{n} (x_{i} - \mu)^2f(x_{i}) = \sum_{i=1}^{n}x_{i}^2f(x_{i}) -\mu^2 $$    
 标准方差为 $$ \sigma $$
@@ -93,11 +93,11 @@ $$ \color{red}{Z = \frac{\bar{X} - \mu }{\sigma / \sqrt{n}} \quad as \quad n \to
 
 
 ## 单变量情况
-#### 统计推断    
+### 统计推断    
 统计在研究现象的总体数量关系时，需要了解的总体对象的范围往往是很大的，有时甚至是无限的，而由于经费、时间和精力等各种原因，以致有时在客观上只能从中观察部分单位或有限单位进行计算和分析，我们要根据样本数据来推断总体数量特征。      
 统计推断分为两个部分： **参数估计**和**假设检验**
 
-#### 参数估计 
+### 参数估计 
 - 一般用样本均值估计总体均值     
 样本均值函数: $$\mu = \frac{\sum_{i=1}^{N}x_{i}}{N} $$
 
@@ -113,7 +113,7 @@ $$ \mu $$ | $$ \bar{X}= \frac{\sum X_{i}}{n} $$ | $$ \bar{x} $$
 $$ \sigma^{2} $$ | $$ S^{2}=\frac{\sum (X_{i} - X)^{2}}{n-1} $$ | $$ s^{2} $$ 
 
 
-#### 假设检验
+### 假设检验
 基本思想是**小概率反证思想**。小概率事件（P<0.01或P<0.05）在一次试验中基本上不会发生。     
 即我们对总体的某个统计量（一般为均值）提出零假设H0，然后求得在这个零假设前提下当前样本的发生概率，如果概率非常小，则认为我们的零假设不对，拒绝我们的零假设H0。     
 具体步骤结合例子为下面7步：      
@@ -162,7 +162,7 @@ $$ \sigma^{2} $$ | $$ S^{2}=\frac{\sum (X_{i} - X)^{2}}{n-1} $$ | $$ s^{2} $$
     $$ \beta = \mathbb{P}( \frac{48.5-50.5}{0.79} < Z < \frac{51.5-50.5}{0.79} ) = \mathbb{P}( -2.53 < Z < 1.27 ) =  \Phi(1.27) - \Phi(-2.53) =0.8980 - 0.0057 = 0.8923 $$      
     在真正的总体均值距离H0假设的总体均值比较近的时候，我们有很大的几率不会拒绝H0。
 
-#### P值(P-Value)    
+### P值(P-Value)    
 现在我们有了样本数据，我们可以求得假设H0正确的概率，即为P值。    
 在上例中：求得样本均值$$\bar{x}$$至少51.8时,然后我们计算H0:$$\mu=50$$正确的概率P值。    
 $$ 根据分布，求得 \mathbb{P}[\bar{X} \leq 51.8 | H_{0}正确]=0.0113$$ 
@@ -178,13 +178,13 @@ $$ H_{1}: \mu \neq \mu_{0}  $$ | $$ P=2[1-\Phi(\|z_{0}\|)] $$ | $$ z_{0}>z_{\alp
 $$ H_{1}: \mu > \mu_{0}  $$ | $$P=1-\Phi(z_{0})$$ | $$ z_{0}>z_{\alpha} $$ 
 $$ H_{1}: \mu < \mu_{0}  $$ | $$P=\Phi(z_{0})$$ | $$ z_{0}<-z_{\alpha} $$ 
 
-#### 均值的置信区间 Confidence Interval on the Mean 
+### 均值的置信区间 Confidence Interval on the Mean 
 有时候，光给出点估计是不够的，我们想要的一个区间，比如真实值有95%的概率落在[48，52]。    
 置信区间体现了这个参数的真实值有一定概率落在测量结果的周围的程度。比如一个Two-sided区间$$\mathbb{P}[L \leq \Theta \leq H]=1-\alpha$$      
 其中$$1-\alpha$$为置信系数confidence coefficient，即真实值落在[L,H]范围内的概率。    
 也有单边One-sided区间：$$\mathbb{P}[L \leq \Theta ]=1-\alpha 和 \mathbb{P}[\Theta \leq H]=1-\alpha$$     
 
-### 把单变量问题分为以下两种：
+### 把单变量问题分为以下两种情况：
 #### 在总体方差已知的情况下，推断总体均值
 以上的例子就是基于方差已知的情况。
 
