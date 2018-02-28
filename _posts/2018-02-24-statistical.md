@@ -1,7 +1,7 @@
 ---
 layout: splash
-title: "应用工程统计学"
-date:   2017-09-23 10:06:47 +0800
+title: "应用工程统计学 Applied Statistics"
+date:   2018-02-24 10:06:47 +0800
 categories: machine learning
 comments: false
 share: true
@@ -181,22 +181,34 @@ $$ H_{1}: \mu < \mu_{0}  $$ | $$P=\Phi(z_{0})$$ | $$ z_{0}<-z_{\alpha} $$
 ### 均值的置信区间 Confidence Interval on the Mean 
 有时候，光给出点估计是不够的，我们想要的一个区间，比如真实值有95%的概率落在[48，52]。    
 置信区间体现了这个参数的真实值有一定概率落在测量结果的周围的程度。比如一个Two-sided区间$$\mathbb{P}[L \leq \Theta \leq H]=1-\alpha$$      
-其中$$1-\alpha$$为置信系数confidence coefficient，即真实值落在[L,H]范围内的概率。    
-也有单边One-sided区间：$$\mathbb{P}[L \leq \Theta ]=1-\alpha 和 \mathbb{P}[\Theta \leq H]=1-\alpha$$     
+其中$$1-\alpha$$为置信系数confidence coefficient，即真实值落在[L,H]范围内的概率。   
+也有单边One-sided区间：$$\mathbb{P}[L \leq \Theta ]=1-\alpha 和 \mathbb{P}[\Theta \leq H]=1-\alpha$$    
+**当我们给定显著性水平（Significant Level)以后，我们就可以通过计算求得置信区间 Confidence Interval的范围**，即样本均值落在该置信区间内的时候，我们无法拒绝H0。
 
-### 把单变量问题分为以下两种情况：
-#### 在总体方差已知的情况下，推断总体均值
-以上的例子就是基于方差已知的情况。
+### 单变量问题主要有以下情况
+#### 在总体方差已知的情况下，推测总体均值
+以上的例子就是基于方差已知的情况。对假设的总体方差进行z-test。
+这种情况现实问题中比较少见，方差已知则问题变得简单了。     
+根据中心极限定理，样本均值遵从标准正态分布：$$Z=\frac{\bar{X}-\mu}{\alpha/\sqrt{n}}$$ 
 
-#### 在总体方差未知的情况下，推断总体均值
-总体方差未知的情况下，如果样本数量大于40，S和$$\mu$$的差别比较小，我们可以将样本方差S来近似$$\mu$$直接用于z-test。   
-可是当样本数量小于40时，样本方差S和总体方差$$\mu$$的差别会比较大，于是我们不能再使用z分布，需要用到t分布。（有些书上写小于30）    
+#### 在总体方差未知的情况下，推测总体均值
+总体方差未知的情况下，如果样本数量大于40，S和$$\mu$$的差别比较小，我们可以将样本方差S来近似总体均值$$\mu$$直接用于z-test。   
+可是当样本数量小于40时，样本方差S和总体方差$$\mu$$的差别会比较大，于是我们不能再使用z分布，需要用到t分布，进行t-test。   
 t分布：根据小样本来估计呈正态分布且方差未知的总体的均值。表示为$$T=\frac{\bar{X}-\mu}{S/\sqrt{n}}$$服从t分布。    
 t分布的概率密度函数为：$$ f(x)=\frac{\Gamma (\frac{k+1}{2})}{\sqrt{k\pi} \Gamma (\frac{k}{2})}(1+\frac{x^2}{k})^{-\frac{k+1}{2}}, x\in \mathbb{R} $$。  
-使用中需要查询[t分布临界值表](https://wenku.baidu.com/view/49682ca7b0717fd5360cdc99.html),用自由度k和显著性水平$$\alpha$$来查询拒绝H0的临界值。     
+使用中需要查询[t分布临界值表](https://wenku.baidu.com/view/49682ca7b0717fd5360cdc99.html),用自由度k和显著性水平$$\alpha$$来查询拒绝H0的样本均值临界值。     
 **t分布和正态分布的关系如下图**：当自由度k变大，即样本数量变大时，t分布越来越向中间集中，越来越靠近正态z分布。正态分布是t分布的极限状态。    
-![t-distribution]({{ site.baseurl }}/img/t-distribution.gif){:width="300px"} 
+![t-distribution]({{ site.baseurl }}/img/t-distribution.gif){:width="300px"}       
 
+#### 变量呈正态分布情况下，推测总体方差
+首先，变量必须是符合正态分布的。     
+	卡方分布概念：若n个相互独立的随机变量ξ₁，ξ₂，...,ξn，均服从标准正态分布（也称独立同分布于标准正态分布），则这n个服从标准正态分布的随机变量的平方和构成一新的随机变量，其分布规律称为卡方分布（chi-square distribution）。
+
+
+
+#### 二项分布情况下，推测比例
+
+#### 推测总体的分布
 
  
 ## 双变量情况
