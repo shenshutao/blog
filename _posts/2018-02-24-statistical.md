@@ -184,8 +184,8 @@ $$ H_{1}: \mu < \mu_{0}  $$ | $$P=\Phi(z_{0})$$ | $$ z_{0}<-z_{\alpha} $$
 其中$$1-\alpha$$为置信系数confidence coefficient，即真实值落在[L,H]范围内的概率。   
 也有单边One-sided区间：$$\mathbb{P}[L \leq \Theta ]=1-\alpha 和 \mathbb{P}[\Theta \leq H]=1-\alpha$$    
 当我们拿到一个样本，在给定显著性水平（Significant Level)以后，我们就可以通过计算求得置信区间 Confidence Interval的范围。这个范围由样本数据和显著性水平决定，和假设检验H0无关。    
-方差已知的情况下，公式：$$\bar{x}-\frac{z_{\alpha/2}\sigma}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{z_{\alpha/2}\sigma}{\sqrt{n}}$$       
-方差未知的情况下，公式：$$\bar{x}-\frac{t_{\alpha/2,n-1}s}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{t_{\alpha/2,n-1}s}{\sqrt{n}}$$        
+方差已知，或者方差未知样本数量大于30的情况下，公式：$$\bar{x}-\frac{z_{\alpha/2}\sigma}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{z_{\alpha/2}\sigma}{\sqrt{n}}$$       
+方差未知，样本数量小于30的情况下，公式：$$\bar{x}-\frac{t_{\alpha/2,n-1}s}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{t_{\alpha/2,n-1}s}{\sqrt{n}}$$        
 
 
 
