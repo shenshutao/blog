@@ -170,7 +170,7 @@ $$ 根据分布，求得 \mathbb{P}[\bar{X} \leq 51.8 | H_{0}正确]=0.0113$$
 
 One-sided还是Two-sided取决于备择假设，备择假设取决于实际问题。一般来讲我们设计假设验证都是想要去拒绝零假设H0，我们关心的其实是备择假设H1，不等于，还是大于或者小于。比如检验新配方是否有改良，数据越高越好时，我们只关心H1:$$\mu>\mu_{0}$$。   
 零假设H0: $$\mu=\mu_{0}$$    
-样本均值分布: $$Z_{0}=\frac{\bar{X}-\mu_{0}}{\sigma/\sqrt{n}}$$
+样本均值分布: $$Z_{0}=\frac{\bar{X}-\mu_{0}}{\sigma/\sqrt{n}}$$    
 
 备择假设 | P值 | 假设拒绝条件
 ---- | --- | ---   
@@ -183,7 +183,9 @@ $$ H_{1}: \mu < \mu_{0}  $$ | $$P=\Phi(z_{0})$$ | $$ z_{0}<-z_{\alpha} $$
 置信区间体现了这个参数的真实值有一定概率落在**测量结果**的周围的程度。比如一个Two-sided区间$$\mathbb{P}[L \leq \Theta \leq H]=1-\alpha$$      
 其中$$1-\alpha$$为置信系数confidence coefficient，即真实值落在[L,H]范围内的概率。   
 也有单边One-sided区间：$$\mathbb{P}[L \leq \Theta ]=1-\alpha 和 \mathbb{P}[\Theta \leq H]=1-\alpha$$    
-当我们拿到一个样本，在给定显著性水平（Significant Level)以后，我们就可以通过计算求得置信区间 Confidence Interval的范围。这个范围由样本数据和显著性水平决定，和H0无关。
+当我们拿到一个样本，在给定显著性水平（Significant Level)以后，我们就可以通过计算求得置信区间 Confidence Interval的范围。这个范围由样本数据和显著性水平决定，和假设检验H0无关。    
+方差已知的情况下，公式：$$\bar{x}-\frac{z_{\alpha/2}\sigma}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{z_{\alpha/2}\sigma}{\sqrt{n}}$$       
+方差未知的情况下，公式：$$\bar{x}-\frac{t_{\alpha/2,n-1}s}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{t_{\alpha/2,n-1}s}{\sqrt{n}}$$        
 
 
 
