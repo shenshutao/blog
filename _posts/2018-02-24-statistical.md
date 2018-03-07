@@ -179,7 +179,7 @@ $$ H_{1}: \mu > \mu_{0}  $$ | $$P=1-\Phi(z_{0})$$ | $$ z_{0}>z_{\alpha} $$
 $$ H_{1}: \mu < \mu_{0}  $$ | $$P=\Phi(z_{0})$$ | $$ z_{0}<-z_{\alpha} $$ 
 
 ### 均值的置信区间 Confidence Interval on the Mean 
-有时候，**根据样本**，光给出点估计是不够的，我们想要的一个区间，比如真实值有95%的概率落在[48，52]。    
+有时候，**根据样本均值**，光给出点估计是不够的，我们想要的一个区间，比如真实值有95%的概率落在[48，52]。    
 置信区间体现了这个参数的真实值有一定概率落在**测量结果**的周围的程度。比如一个Two-sided区间$$\mathbb{P}[L \leq \Theta \leq H]=1-\alpha$$      
 其中$$1-\alpha$$为置信系数confidence coefficient，即真实值落在[L,H]范围内的概率。   
 也有单边One-sided区间：$$\mathbb{P}[L \leq \Theta ]=1-\alpha 和 \mathbb{P}[\Theta \leq H]=1-\alpha$$    
@@ -196,14 +196,16 @@ $$ H_{1}: \mu < \mu_{0}  $$ | $$P=\Phi(z_{0})$$ | $$ z_{0}<-z_{\alpha} $$
 根据中心极限定理，样本均值遵从标准正态分布。 
 
 ##### z-test
-根据中心极限定理: $$Z=\frac{\bar{X}-\mu}{\alpha/\sqrt{n}}$$ 服从标准正态分布 
+根据中心极限定理: $$Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}$$ 服从标准正态分布 
 
 验证：   
 $$H_{0}: \mu = \mu_{0}$$    
 $$H_{1}: \mu \neq \mu_{0}$$  
 测试的统计量:   
-$$Z_{0}=\frac{\bar{X}-\mu_{0}}{\alpha/\sqrt{n}}$$     
+$$Z_{0}=\frac{\bar{X}-\mu_{0}}{\sigma/\sqrt{n}}$$     
 检验方式：1.P值 2.给定显著性水平 3.置信区间
+
+置信区间 CI公式：$$\bar{x}-\frac{z_{\alpha/2}\sigma}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{z_{\alpha/2}\sigma}{\sqrt{n}} $$    
 
 #### 在总体方差未知的情况下，推测总体均值
 总体方差未知的情况下，如果样本数量大于30，S和$$\mu$$的差别比较小，我们可以将样本方差S来近似总体均值$$\mu$$直接用于z-test。   
@@ -224,6 +226,8 @@ $$H_{0}: \mu = \mu_{0}$$
 $$T_{0}=\frac{\bar{X}-\mu_{0}}{S/\sqrt{n}}$$ 服从t分布   
 检验方式：1.P值 2.给定显著性水平 3.置信区间
 
+置信区间 CI公式：$$\bar{x}-\frac{t_{\alpha/2,n-1}s}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{t_{\alpha/2,n-1}s}{\sqrt{n}}$$ 
+
 #### 变量呈正态分布情况下，推测总体方差
 首先，变量必须是符合正态分布的。     
 卡方分布概念：若n个相互独立的随机变量ξ₁，ξ₂，...,ξn，均服从标准正态分布（也称独立同分布于标准正态分布），则这n个服从标准正态分布的随机变量的平方和构成一新的随机变量，其分布规律称为卡方分布（chi-square distribution）。     
@@ -238,6 +242,8 @@ $$H_{0}: \sigma^{2} = \sigma_{0}^{2}$$
 $$X_{0}^{2}=\frac{(n-1)S^{2}}{\sigma_{0}^{2}}$$    
 检验方式：1.P值 2.给定显著性水平 3.置信区间
 
+置信区间 CI公式：$$\frac{(n-1)s^{2}}{X^{2}_{\alpha/2,n-1}} \leq \sigma^{2} \leq \frac{(n-1)s^{2}}{X^{2}_{1-\alpha/2,n-1}} $$
+
 [卡方分布临界值表](http://staff.ustc.edu.cn/~jbs/applex3.pdf)
 
 #### 二项分布情况下，推测比例    
@@ -251,6 +257,8 @@ $$H_{0}: p = p_{0}$$
 测试的统计量:   
 $$ Z_{0} = \frac{X-np_{0}}{\sqrt{np_{0}(1-p_{0})}}$$    
 检验方式：1.P值 2.给定显著性水平 3.置信区间
+
+置信区间 CI公式：$$ \hat{p}-z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \leq p \leq \hat{p}+z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
 
 #### 推测总体分布
 - Probability plotting 概率图（主要用来判断正态分布，对数正态分布，威布尔分布）
@@ -325,10 +333,14 @@ $$H_{0}: \sigma_{1}^{2} = \sigma_{2}^{2}$$
 测试的统计量:   
 $$F_{0}=\frac{S_{1}^{2}}{S_{2}^{2}}$$ 
 
+置信区间 CI公式：$$\frac{s_{1}^{2}}{s_{2}^{2}}f_{1-\alpha/2,n_{2}-1,n_{1}-1} \leq \frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} \leq \frac{s_{1}^{2}}{s_{2}^{2}}f_{\alpha/2,n_{2}-1,n_{1}-1} $$
+
+[F分布临界值表](http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/FTable.pdf)
+
 ## 多变量情况（ANOVA）
 ANOVA(Analysis of Variance), 用于两个及两个以上样本均数差别的显著性检验,也是基于F-Test，不过分子和分母与上面双变量情况下有所不同。    
-$$ F = \frac{组间方差}{组内方差} $$，用F值与其临界值比较，推断各个样本是否来自相同的总体。    
-[F分布临界值表]（http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/FTable.pdf）
+$$ F = \frac{组间方差}{组内方差} $$，用F值与其临界值比较，推断各个样本是否来自相同的总体。   
+
 
 ## 各分布之间的关系 
 [正态分布的前世今生](https://cosx.org/2013/01/story-of-normal-distribution-1/) ，正态分布z的形状是由$$\sigma$$决定，位置是由$$\mu$$决定的，可是现实中$$\sigma$$往往未知，所以，就用s来估计$$\sigma$$，s是样本标准差。样本标准差和总体标准差公式自由度不一样，在样本数量较小时误差太大无法近似，于是t分布就出现了，正好根据中心极限定理，均值符合正态分布，z和t就被用于均值检验。卡方分布是由正态分布推导出来的，k个正态分布的平方和符合自由度为k的卡方分布，用来表示方差的分布刚刚好。F分布又是卡方分布演化而来，用来比较两个方差。
