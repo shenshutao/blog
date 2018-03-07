@@ -183,7 +183,7 @@ $$ H_{1}: \mu < \mu_{0}  $$ | $$P=\Phi(z_{0})$$ | $$ z_{0}<-z_{\alpha} $$
 置信区间体现了这个参数的真实值有一定概率落在**测量结果**的周围的程度。比如一个Two-sided区间$$\mathbb{P}[L \leq \Theta \leq H]=1-\alpha$$      
 其中$$1-\alpha$$为置信系数confidence coefficient，即真实值落在[L,H]范围内的概率。   
 也有单边One-sided区间：$$\mathbb{P}[L \leq \Theta ]=1-\alpha 和 \mathbb{P}[\Theta \leq H]=1-\alpha$$    
-当我们拿到一个样本，在给定显著性水平（Significant Level)以后，我们就可以通过计算求得置信区间 Confidence Interval的范围。这个范围由样本数据和显著性水平决定，和假设检验H0无关。    
+当我们拿到一个样本，在给定显著性水平（Significant Level)以后，我们就可以通过计算求得置信区间 Confidence Interval的范围。这个范围由样本数据和显著性水平决定，和假设检验H0无关。当我们求得置信区间的值，根据H0是否落在置信区间，可以判断是否拒绝假设检验H0。    
 方差已知，或者方差未知样本数量大于30的情况下，公式：$$\bar{x}-\frac{z_{\alpha/2}\sigma}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{z_{\alpha/2}\sigma}{\sqrt{n}}$$       
 方差未知，样本数量小于30的情况下，公式：$$\bar{x}-\frac{t_{\alpha/2,n-1}s}{\sqrt{n}} \leq \mu \leq \bar{x}+\frac{t_{\alpha/2,n-1}s}{\sqrt{n}}$$        
 
@@ -264,7 +264,7 @@ $$ Z_{0} = \frac{X-np_{0}}{\sqrt{np_{0}(1-p_{0})}}$$
 
 #### 推测总体分布
 - Probability plotting 概率图（主要用来判断正态分布，对数正态分布，威布尔分布）
-一般我们可以用样本数据画一个正态概率图。如果这组实数服从正态分布，正态概率图将是一条直线。   
+一般我们可以用样本数据画一个正态概率图。如果这组实数服从正态分布，正态概率图将是一条直线。    
 ```python
 from scipy import stats
 import matplotlib.pyplot as plt
