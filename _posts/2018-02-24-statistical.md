@@ -57,7 +57,7 @@ $$ \mu 是平均值， \sigma ^{2}是方差 $$
 $$ Z = \frac{X - \mu }{\sigma } $$     
 所以：    
 $$ \mathbb{P}\left [ X\leq x \right ] = \mathbb{P}\left [ \frac{X - \mu }{\sigma } \leq \frac{x - \mu }{\sigma } \right ] = \Phi \left ( \frac{x - \mu }{\sigma } \right ) $$     
-然后我们就可以使用[标准正态分布表](http://www.stat.ufl.edu/~athienit/Tables/Ztable.pdf)查询概率了，表上面是它的累积分布函数的值。     
+然后我们就可以使用[标准正态分布表](http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/ZTable.pdf)查询概率了，表上面是它的累积分布函数的值。     
 
 
 ## 离散型随机变量
@@ -328,7 +328,7 @@ $$F_{0}=\frac{S_{1}^{2}}{S_{2}^{2}}$$
 ## 多变量情况（ANOVA）
 ANOVA(Analysis of Variance), 用于两个及两个以上样本均数差别的显著性检验,也是基于F-Test，不过分子和分母与上面双变量情况下有所不同。    
 $$ F = \frac{组间方差}{组内方差} $$，用F值与其临界值比较，推断各个样本是否来自相同的总体。    
-
+[F分布临界值表]（http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/FTable.pdf）
 
 ## 各分布之间的关系 
 [正态分布的前世今生](https://cosx.org/2013/01/story-of-normal-distribution-1/) ，正态分布z的形状是由$$\sigma$$决定，位置是由$$\mu$$决定的，可是现实中$$\sigma$$往往未知，所以，就用s来估计$$\sigma$$，s是样本标准差。样本标准差和总体标准差公式自由度不一样，在样本数量较小时误差太大无法近似，于是t分布就出现了，正好根据中心极限定理，均值符合正态分布，z和t就被用于均值检验。卡方分布是由正态分布推导出来的，k个正态分布的平方和符合自由度为k的卡方分布，用来表示方差的分布刚刚好。F分布又是卡方分布演化而来，用来比较两个方差。
