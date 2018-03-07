@@ -343,8 +343,8 @@ $$F_{0}=\frac{S_{1}^{2}}{S_{2}^{2}}$$
 [F分布临界值表](http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/FTable.pdf)
 
 ## 多变量情况（ANOVA）
-ANOVA(Analysis of Variance), 用于两个及两个以上样本均数差别的显著性检验,也是基于F-Test，不过分子和分母与上面双变量情况下有所不同。    
-$$ F = \frac{组间方差}{组内方差} $$，用F值与其临界值比较，推断各个样本是否来自相同的总体。   
+ANOVA(Analysis of Variance), 用于两个及两个以上样本均数差别的显著性检验，也是基于F-Test，不过分子和分母与上面双变量情况下有所不同。    
+$$ F = \frac{组间方差}{组内方差} $$，用F值与其临界值比较，推断各个样本是否来自相同的总体。
 
 
 
