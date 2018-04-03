@@ -64,9 +64,19 @@ $$\hat{\beta}_{1}=\frac{S_{xy}}{S_{xx}}$$
 因为$$\varepsilon_{i}$$服从正态分布，所以$$y_{i}$$服从正态分布，由于$$\hat{\beta}_{1}=\frac{S_{xy}}{S_{xx}}，\hat{\beta}_{1}和y_{i}们为线性关系$$，我们得出：
 - $$\hat{\beta}_{1}$$服从正态分布
 - 期望值 $$E(\hat{\beta}_{1})=\beta_{1}$$
-- 方差 $$Var(\hat{\beta}_{1})=\sigma_{\hat{\beta}_{1}}^{2}=\frac{\sigma^{2}}{\sum (x_{i}-\bar{x})^{2}}=\frac{\sigma^{2}}{S_{xx}} $$
+- 方差 $$Var(\hat{\beta}_{1})=\sigma_{\hat{\beta}_{1}}^{2}=\frac{\sigma^{2}}{\sum (x_{i}-\bar{x})^{2}}=\frac{\sigma^{2}}{S_{xx}} $$.  
 
-既然知道了$$\hat{\beta}_{1}～N(\beta_{1},\sigma^{2}/S_{xx})$$，我们可以进行假设检验。
+    从方差等式$$Var(\hat{\beta}_{1})=\frac{\sigma^{2}}{\sum (x_{i}-\bar{x})^{2}}$$中，我们可以知道，为了减小$$\hat{\beta}_{1}$$的方差，从分母上看，拿更大的样本，分母会变得更大，能有效减小$$Var(\hat{\beta}_{1})$$。当然在相同条件下，样本x点在合理范围内分布更广的话，势必$$\sum (x_{i}-\bar{x})^{2}$$也会更大。    
+
+
+既然知道了$$\hat{\beta}_{1}～N(\beta_{1},\sigma^{2}/S_{xx})$$，我们可以进行假设检验。   
+一般用Z-test来验证$$H_{0}: \hat{\beta}_{1} = 0$$，等于零意味着x与y无线性关系：   
+$$H_{0}: \hat{\beta}_{1} = 0$$    
+$$H_{1}: \hat{\beta}_{1} \neq 0$$  
+测试的统计量:   
+$$Z_{0}=\frac{\hat{\beta}_{1}-0}{\hat{\sigma}/\sqrt{S_{xx}}}$$     
+检验方式：1.P值 2.给定显著性水平 3.置信区间
+
 ## 模型建立
 ## 模型充分性检查
 ## 置信区间
