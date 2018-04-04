@@ -86,7 +86,7 @@ GEM
       forwardable-extended (~> 2.6)
     public_suffix (3.0.0)
     rack (1.6.8)
-    rack-protection (1.5.3)
+    rack-protection (1.5.5)
       rack
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
@@ -135,4 +135,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.15.4
+   1.16.1
