@@ -20,7 +20,7 @@ published: true
 - 本人用Mac操作系统，ssh key是放在~/.ssh/id_rsa，放在别的地方也可以用-i命令指定路径。  
 
 ## 买四台主机，主机名和配置如下
-![servers]({{ site.baseurl }}/img/do_servers.png){:width="200px"}
+![servers]({{ site.baseurl }}/img/do_servers.png){:width="200px"}     
 记得创建时使用ssh key
 
 ## IP抄下来    
