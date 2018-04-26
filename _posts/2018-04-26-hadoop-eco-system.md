@@ -13,14 +13,15 @@ published: true
 ## 前言
 - 学习笔记，如果用到生产环境请注意安全配置。
 - 因为DigitalOcean比较便宜，所以选择这个平台。    
-- 本人用Mac操作系统。  
 - 前面几步也可以看[这个Youtube上的视频](https://youtu.be/HT_3F6TGiZY)
 
 ## 准备SSH Key
 - 准备ssh的key，在自己机器上执行以下操作，[网站链接](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)。  
+- 本人用Mac操作系统，ssh key是放在~/.ssh/id_rsa，放在别的地方也可以用-i命令指定路径。  
 
 ## 买四台主机，主机名和配置如下
 ![servers]({{ site.baseurl }}/img/do_servers.png){:width="200px"}
+记得创建时使用ssh key
 
 ## IP抄下来    
 ```
@@ -204,6 +205,8 @@ df_load.show()
 在DigitalOcean账户下，Image，创建Snapshot。
 
 ## 配置完成
+不知道各位是不是像我一样，踩了很多很多很多坑...
+终于配好了，休息会儿吧... 
 
 
 
