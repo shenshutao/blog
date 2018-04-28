@@ -5,7 +5,7 @@ date:   2018-04-26 18:06:47 +0800
 categories: machine learning
 comments: true
 share: true
-published: true
+published: false
 ---
 * 目录    
 {:toc}
@@ -205,7 +205,7 @@ df_load.show()
 在DigitalOcean账户下，Image，创建Snapshot。
 
 ## 配置完成
-不知道各位是不是像我一样，踩了很多很多很多坑...
+不知道各位是不是像我一样，踩了很多很多很多坑...     
 终于配好了，休息会儿吧... 
 
 
