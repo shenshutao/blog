@@ -86,9 +86,10 @@ Job id            Name             User              Time Use S Queue
 - Some time hard to get the job run due to a long queue.
 
 ## Sample Here !!!
+After login to NSCC:
 ```
 git clone https://github.com/shenshutao/deeplearning_sample.git
-
+cd deeplearning_sample/
 qsub submit.pbs
 ```
 
