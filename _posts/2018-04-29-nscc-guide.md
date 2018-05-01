@@ -40,8 +40,6 @@ git --version
 - You can connect to the server use FTP tools as Cyberduck/Mac or FileZilla/Win, then upload your project.
 - You can download project from internet. 
 
-(Let me find a sample later...)
-
 ## Prepare a PBS script ask for the computing resources
 ```
 vi submit.pbs
@@ -86,5 +84,13 @@ Job id            Name             User              Time Use S Queue
 - Seems only can run 1 job at 1 time.
 - Can not upgrade the Keras version, can use some newly added modle.
 - Some time hard to get the job run due to a long queue.
+
+## Sample Here !!!
+```
+git clone https://github.com/shenshutao/deeplearning_sample.git
+
+qsub submit.pbs
+```
+
 
 
