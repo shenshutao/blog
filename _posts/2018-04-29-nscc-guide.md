@@ -78,7 +78,7 @@ Job id            Name             User              Time Use S Queue
 
 ## Done.
 ### Pros
-- FREE for student ! Although got total computing time limit as 100000.00 hrs, not a bit issue,
+- FREE for student ! Although got total computing time limit as 100000.00 hrs, not a big issue.
 
 ### Cons
 - Seems only can run 1 job at 1 time.
