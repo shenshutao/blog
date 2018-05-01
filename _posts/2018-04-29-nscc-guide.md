@@ -91,6 +91,7 @@ After login to NSCC:
 git clone https://github.com/shenshutao/deeplearning_sample.git
 cd deeplearning_sample/
 qsub submit.pbs
+qstat
 ```
 
 
