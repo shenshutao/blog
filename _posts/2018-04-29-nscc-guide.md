@@ -94,7 +94,8 @@ Job id            Name             User              Time Use S Queue
 - Reminder do housekeeping! Any files more than 30 days old may be removed without notice! 
 
 ## A Sample Here !!!
-After login to NSCC:
+After login to NSCC:    
+(Sorry, encounter some problem clone the project from github directly, you might need download the project first then upload via FTP)
 ```
 git clone https://github.com/shenshutao/cnn_model.git
 cd cnn_model/
