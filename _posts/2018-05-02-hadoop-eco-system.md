@@ -23,10 +23,10 @@ Here we use digital ocean as it's cheap, if you use any IAAS platform as AWS, AL
 ## Buy 4 hosts
 - Create digital ocean account
 - Key in your credit card information.
-- Go to Main page -> Create -> Droplets -> choose CentOS -> one 8GB & three 2GB -> use the ssh key just created.
+- Go to Main page -> Create -> Droplets -> choose CentOS -> one 8GB & three 2GB -> use the ssh key just created.     
 ![servers]({{ site.baseurl }}/img/do_servers.png){:width="200px"}    
     
-## write down your IP
+** Record down your IP **
 ```
 159.65.135.11 hadoop-01.bde.com hadoop-01
 206.189.36.21 hadoop-02.bde.com hadoop-02
@@ -112,9 +112,7 @@ vi /etc/ssh/sshd_config
 Try login with hdfs
 ```
 ssh hdfs@hadoop-01.bde.com
-
 	password: hdfs
-
 ```
 
 @@@ Good, we have start up a hadoop cluster ! but now we are using spark1, as spark2 is far more powerful, you can choose contiune.
