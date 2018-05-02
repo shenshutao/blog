@@ -90,6 +90,12 @@ hadoop-0[1-4].bde.com
 - Select Services
 我选了 Core with Spark， 你也可以选别的
 
+**在这些做完后**    
+在7180，点YARN - configuration - 搜 Container Memory
+	把yarn.nodemanager.resource.memory-mb设成1.5GB
+	把yarn.scheduler.maximum-allocation-mb也设成1.5GB
+	分发该配置，点击上方电源图标右边那个按钮 
+
 @@@ 好了，初步搞定了，现在是Spark1，需要Spark2的话继续往下配
 --------------------------
 ## 安装java8 和 spark2
@@ -131,10 +137,6 @@ service cloudera-scm-server restart
 在7180，Add service -> Spark2， 依赖YARN就好。
 History server选hadoop-01， gateway全部选中，按继续。
 在7180，停止spark，移去spark，两个都选None。
-在7180，点YARN - configuration - 搜 Container Memory
-	把yarn.nodemanager.resource.memory-mb设成1.5GB
-	把yarn.scheduler.maximum-allocation-mb也设成1.5GB
-	分发该配置，点击上方电源图标右边那个按钮 
 Hadoop-01终端： 
 	mkdir /var/log/spark2/lineage
 	chmod 777 /var/log/spark2/lineage

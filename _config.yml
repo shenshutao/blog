@@ -85,7 +85,7 @@ analytics:
 author:
   name             : "Shen Shutao"
   avatar           : "/assets/img/tree.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Senior Java Developer <br/>Machine Learning Engineer"
+  bio              : "Senior Software Engineer <br/>Machine Learning Engineer"
   location         : "Singapore"
   email            : "sstwood@gmail.com"
   uri              :
