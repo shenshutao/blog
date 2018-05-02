@@ -18,19 +18,24 @@ The steps below more for NUS.
 - go to https://www.nscc.sg/
 - click "FOR NEW USERS **ENROLLMENT**" -> login -> select NUS -> login to school account -> Done ! You can see the NSCC User Portal.
 - Setup your SSH Key or password (alternative) in the NSCC User Portal.
-    + (if you choose SSH Key, for Mac users, you just copy the content and store in a file named id_rsa, throw in the ~/.ssh folder; for Win users, store as a file & configure in the putty.)
-
-## If you are not in campus, you need use VPN!
-For NUS student, please refer to [this PDF](https://nusit.nus.edu.sg/qat4/wp-content/uploads/downloads/nvpn/nVPN-config-guide-for-students.pdf). From https://nusit.nus.edu.sg/eguides/.     
+    + (if you choose SSH Key, for Mac users, you just copy the content and store in a file named id_rsa, throw in the ~/.ssh folder; for Win users, store as a file & configure in the putty.)    
 
 ## Connect to NSCC server
+### If you are not in campus, you need use VPN!
+For NUS student, please refer to [this PDF](https://nusit.nus.edu.sg/qat4/wp-content/uploads/downloads/nvpn/nVPN-config-guide-for-students.pdf). From https://nusit.nus.edu.sg/eguides/. 
+
+### Connect with SSH command (Mac)
 Check this [NSCC New User Guide](https://help.nscc.sg/wp-content/uploads/2017/06/NSCC_New_User_Starter_Guide_v0.1.pdf)    
 ```
 ssh e0015130@nus.nscc.sg
 ```
 You will see your remaining computing time... For new user is 100000 hrs. 
 
-## Login! Check around
+### Connect with Putty (Win)
+Download Putty, https://www.putty.org/.    
+Connect to nus.nscc.sg with username / password OR ssh key.  
+
+### Login! Check around
 ```
 module available
 git --version
@@ -39,8 +44,10 @@ git --version
 ## Upload a project
 - You can connect to the server use FTP tools as Cyberduck/Mac or FileZilla/Win, then upload your project.
 - You can download project from internet. 
+- Use git command clone project. (As the sample here)
 
-## Prepare a PBS script ask for the computing resources
+## Train a deep learning model
+### Prepare a PBS script ask for the computing resources
 ```
 vi submit.pbs
     #!/bin/bash
@@ -58,7 +65,7 @@ vi submit.pbs
 ```
 [PBS SUB Details](https://www.nas.nasa.gov/hecc/support/kb/commonly-used-qsub-options-in-pbs-scripts-or-in-the-qsub-command-line_175.html)
 
-## Submit job use PBS commands
+### Submit job use PBS commands
 ```
 qsub submit.pbs
 ```
@@ -85,7 +92,7 @@ Job id            Name             User              Time Use S Queue
 - Can not upgrade the Keras version, can use some newly added modle.
 - Some time hard to get the job run due to a long queue.
 
-## Sample Here !!!
+## A Sample Here !!!
 After login to NSCC:
 ```
 git clone https://github.com/shenshutao/cnn_model.git
