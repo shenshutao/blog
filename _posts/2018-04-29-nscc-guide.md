@@ -91,6 +91,7 @@ Job id            Name             User              Time Use S Queue
 - Seems only can run 1 job at 1 time.
 - Can not upgrade the Keras version, can use some newly added modle.
 - Some time hard to get the job run due to a long queue.
+- Reminder do housekeeping! Any files more than 30 days old may be removed without notice! 
 
 ## A Sample Here !!!
 After login to NSCC:
