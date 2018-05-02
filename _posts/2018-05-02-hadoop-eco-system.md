@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "Init Hadoop Eco System on DigitalOcean"
-date:   2018-04-26 18:06:47 +0800
+date:   2018-05-01 18:06:47 +0800
 categories: machine learning
 comments: true
 share: true
