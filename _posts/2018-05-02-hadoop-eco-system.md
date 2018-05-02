@@ -69,7 +69,8 @@ ssh root@hadoop-04.bde.com
 vi /etc/hosts
 ```
 
-## Start ! install CDH (Cloudera Distribution Including Apache Hadoop)
+## Install CDH (Cloudera Distribution Including Apache Hadoop)
+### Install CHD
 ```
 ssh root@hadoop-01.bde.com
 yum install wget
@@ -79,7 +80,7 @@ chmod +x cloudera-manager-installer.bin
 # Just click 'accept' 
 ```
 
-## Configure CDH
+### Configure CDH
 Wait for a while, let it start the CDH manager, use your own browser, go to http://hadoop-01.bde.com:7180/    
 Use 'admin / admin' login, a wizard will take you initial the whole CDH cluster.    
 You can use the default setting for most configuraitons. Some special listed down:
@@ -99,7 +100,7 @@ At 7180，click **YARN** - **configuration** - search **Container Memory**
 	Set yarn.scheduler.maximum-allocation-mb to '1.5GB'
 	Distrubute this configuration, click the button as a file beside the power button.
 
-## Enable password login
+### Enable password login
 Let your data scientist / algrithm engineer use the HDFS role !!!
 Don't give the root role to them ..
 ```
@@ -115,9 +116,10 @@ ssh hdfs@hadoop-01.bde.com
 	password: hdfs
 ```
 
-@@@ Good, we have start up a hadoop cluster ! but now we are using spark1, as spark2 is far more powerful, you can choose contiune.
---------------------------------------------
-## Install Java 8 (Spark2 dependency), [Cloudera Official Instruction](https://www.cloudera.com/documentation/enterprise/latest/topics/cdh_cm_upgrading_to_jdk8.html#xd_583c10bfdbd326ba-590cb1d1-149e9ca9886--7c46)    
+Good, we have start up a hadoop cluster ! 
+
+## Install Java 8 & Spark 2 (If you only use spark 1, ignore these steps)
+### Install Java 8 (Spark2 dependency), [Cloudera Official Instruction](https://www.cloudera.com/documentation/enterprise/latest/topics/cdh_cm_upgrading_to_jdk8.html#xd_583c10bfdbd326ba-590cb1d1-149e9ca9886--7c46)    
 ```
 1. At 7180, stop Cluster all services
 2. At 7180, stop Cloudera Management Service
@@ -142,7 +144,7 @@ ssh hdfs@hadoop-01.bde.com
 8. At 7180，start Cloudera Management Service
 ```
 
-## Install Spark2，[Cloudera Offical Link](https://www.cloudera.com/documentation/spark2/latest/topics/spark2_installing.html)
+### Install Spark2，[Cloudera Offical Link](https://www.cloudera.com/documentation/spark2/latest/topics/spark2_installing.html)
 ```
 cd
 wget http://archive.cloudera.com/spark2/csd/SPARK2_ON_YARN-2.3.0.cloudera2.jar
@@ -162,7 +164,7 @@ Go to Hadoop-01 terminal
 	（Seems a new function for 2.3, simple debug here only ...）
 ```
 
-## Try Spark2
+### Try Spark2
 ```
 1. Switch to hdfs user
 	su hdfs
@@ -183,9 +185,8 @@ Go to Hadoop-01 terminal
 	exit
 ```
 
-@@@ If you use Scala only, you can ignore the below steps.
---------------------------
-## Install pyspark + juptyer notebook
+## For python user (If you only use Scala, you can ignore these steps)
+### Install pyspark + juptyer notebook
 ```
 python --version
 curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
@@ -196,7 +197,7 @@ pip install jupyter
 pip install findspark
 ```
 
-## Run jupyter
+### Run jupyter
 ```
 export PYSPARK_PYTHON=/usr/bin/python
 export HADOOP_USER_NAME=hdfs
@@ -205,7 +206,7 @@ export JAVA_HOME=/usr/java/jdk1.8.0_171
 jupyter notebook --ip=159.65.135.11 --port=80 --allow-root &
 ```
 
-## Try jupyter,[Sample 1](https://creativedata.atlassian.net/wiki/spaces/SAP/pages/82254081/Pyspark+-+Read+Write+files+from+HDFS), [Sample 2](https://spark.apache.org/docs/2.1.0/sql-programming-guide.html#loading-data-programmatically)
+### Try jupyter,[Sample 1](https://creativedata.atlassian.net/wiki/spaces/SAP/pages/82254081/Pyspark+-+Read+Write+files+from+HDFS), [Sample 2](https://spark.apache.org/docs/2.1.0/sql-programming-guide.html#loading-data-programmatically)
 ```
 import findspark
 findspark.init()
