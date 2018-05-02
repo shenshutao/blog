@@ -88,8 +88,8 @@ Job id            Name             User              Time Use S Queue
 ## Sample Here !!!
 After login to NSCC:
 ```
-git clone https://github.com/shenshutao/deeplearning_sample.git
-cd deeplearning_sample/
+git clone https://github.com/shenshutao/cnn_model.git
+cd cnn_model/
 qsub submit.pbs
 qstat
 ```
